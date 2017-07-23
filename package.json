@@ -1,0 +1,19 @@
+{
+  "name": "angular-express-seed-demo",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Hayat Noor <hayatnoor89@gmail.com>",
+  "description": "a simple angular express seed demo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "fs": "0.0.1-security"
+  }
+}
