@@ -1,4 +1,4 @@
-app.controller('UserCtrl', function($scope, UserService) {
+app.controller('UserCtrl', ['$scope', 'UserService', function($scope, UserService) {
 
 	$scope.listAllUsers = function () {
 
@@ -16,4 +16,4 @@ app.controller('UserCtrl', function($scope, UserService) {
 
 	};
 
-});
+}]);

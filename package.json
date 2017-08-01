@@ -13,7 +13,16 @@
   },
   "dependencies": {
     "body-parser": "latest",
+    "ejs": "^2.5.7",
     "express": "latest",
     "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
   }
 }

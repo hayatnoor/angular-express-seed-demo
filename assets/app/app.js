@@ -1,6 +1,6 @@
 var app = angular.module('seed', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/', {
 			templateUrl : 'assets/app/views/home.html'
@@ -13,4 +13,4 @@ app.config(function($routeProvider) {
 			templateUrl : 'assets/app/views/users/user.html',
 			controller: 'UserCtrl'
 		});
-});
+}]);

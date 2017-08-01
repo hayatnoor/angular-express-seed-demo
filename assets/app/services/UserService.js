@@ -1,4 +1,4 @@
-app.service('UserService', function ($http) {
+app.service('UserService', ['$scope', function ($http) {
 	return {
 		getUsers: function () {
 			return $http.get('/users').then(function(response) {
@@ -11,4 +11,4 @@ app.service('UserService', function ($http) {
 			});
 		}
 	}
-});
+}]);
