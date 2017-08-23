@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <% if (settings.env !== 'production') { %>
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<% for(var i = 0; i < cssFiles.length; i++) { %>
+		<link rel="stylesheet" href="<%= cssFiles[i] %>">
+	<% } %>
 <% } else { %>
 	<link rel="stylesheet" href="dist/css/all.min.css">
 <% } %>

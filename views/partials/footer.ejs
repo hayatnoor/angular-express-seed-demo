@@ -5,9 +5,9 @@
 
 
 <% if (settings.env !== 'production') { %>
-    <script src="assets/app/app.js"></script>
-    <script src="assets/app/services/UserService.js"></script>
-    <script src="assets/app/controllers/UserCtrl.js"></script>
+    <% for(var i = 0; i < jsFiles.length; i++) { %>
+        <script src="<%= jsFiles[i] %>"></script>
+    <% } %>
 <% } else { %>
     <script src="dist/js/all.min.js"></script>
 <% } %>
