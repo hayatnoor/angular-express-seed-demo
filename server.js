@@ -19,7 +19,7 @@ app.use('/dist', express.static('dist'));
 
 
 // expose main index.html file which contains angular application
-app.get('/', function (req, res) {
+app.get('/*', function (req, res) {
 	res.render(__dirname + '/views/index');
 });
 

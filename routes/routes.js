@@ -4,9 +4,9 @@ var Users = require('../controllers/users.js');
 
 
 // gets all users
-router.get('/users', Users.getUsers);
+router.get('/api/users', Users.getUsers);
 
 // gets one user
-router.get('/user', Users.getUser);
+router.get('/api/user', Users.getUser);
 
 module.exports = router;

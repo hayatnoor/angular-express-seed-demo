@@ -1,12 +1,12 @@
-app.service('UserService', ['$scope', function ($http) {
+app.service('UserService', ['$http', function ($http) {
 	return {
 		getUsers: function () {
-			return $http.get('/users').then(function(response) {
+			return $http.get('/api/users').then(function(response) {
 				return response;
 			});
 		},
 		getUser: function () {
-			return $http.get('/user').then(function(response) {
+			return $http.get('/api/user').then(function(response) {
 				return response;
 			});
 		}

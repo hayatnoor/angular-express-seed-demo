@@ -4,6 +4,7 @@ app.controller('UserCtrl', ['$scope', 'UserService', function($scope, UserServic
 
 		UserService.getUsers().then(function(response) {
 			$scope.users = response.data;
+
 		});
 
 	};
