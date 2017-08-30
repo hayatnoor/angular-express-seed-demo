@@ -39,5 +39,5 @@ app.get('/*', function (req, res) {
 
 // listen on a port specified
 app.listen(port, function () {
-	console.log('Example app listening on port ' + port)
+	console.log('Angular Express Node Seed Demo app listening on port ' + port)
 });
