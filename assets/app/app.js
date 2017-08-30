@@ -15,12 +15,24 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		})
 		.when('/users', {
 			templateUrl : 'assets/app/views/users/all.html',
-			controller: 'UserCtrl'
+			controller: 'UserCtrl',
+			requiresLogin: true
 		})
 		.when('/user', {
 			templateUrl : 'assets/app/views/users/user.html',
-			controller: 'UserCtrl'
+			controller: 'UserCtrl',
+			requiresLogin: true
 		});
 
 	$locationProvider.html5Mode(true);
+}]).run(['$rootScope', '$location', function($rootScope, $location) {
+	// when the route change begins, see if the page requires login and check to see if the user object is populated
+	$rootScope.$on('$routeChangeStart', function(event, next, current) {
+
+		if (next && next.requiresLogin && !$rootScope.user) {
+			$location.path('/');
+		}
+
+	});
+
 }]);

@@ -26,8 +26,8 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown" ng-show="user">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="/logout">Logout</a></li>
+				<ul class="dropdown-menu" ng-controller="AuthCtrl">
+					<li><a href="" ng-click="logout()">Logout</a></li>
 				</ul>
 			</li>
 		</ul>
