@@ -5,6 +5,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		.when('/', {
 			templateUrl : 'assets/app/views/home.html'
 		})
+		.when('/login', {
+			templateUrl : 'assets/app/views/login.html',
+			controller: 'AuthCtrl'
+		})
+		.when('/register', {
+			templateUrl : 'assets/app/views/register.html',
+			controller: 'AuthCtrl'
+		})
 		.when('/users', {
 			templateUrl : 'assets/app/views/users/all.html',
 			controller: 'UserCtrl'
