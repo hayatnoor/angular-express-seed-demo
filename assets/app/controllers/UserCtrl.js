@@ -1,9 +1,12 @@
-app.controller('UserCtrl', ['$scope', 'UserService', function($scope, UserService) {
+app.controller('UserCtrl', ['$scope', 'UserService', '$timeout', function($scope, UserService, $timeout) {
 
 	$scope.listAllUsers = function () {
 
 		UserService.getUsers().then(function(response) {
-			$scope.users = response.data;
+			// this is used to fake wait time
+			$timeout(function () {
+				$scope.users = response.data;
+			}, 5000);
 
 		});
 
